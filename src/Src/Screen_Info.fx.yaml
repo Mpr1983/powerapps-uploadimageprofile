@@ -1,0 +1,115 @@
+Screen_Info As screen:
+    OnVisible: =
+
+    Email As label:
+        BorderThickness: =1
+        Height: =70
+        Size: =21
+        Text: =varGlobalUser.email
+        Width: =560
+        X: =40
+        Y: =625
+        ZIndex: =1
+
+    JobTitle As label:
+        BorderThickness: =1
+        Height: =70
+        Size: =21
+        Text: =varGlobalUser.jobtitle
+        Width: =560
+        X: =40
+        Y: =777
+        ZIndex: =2
+
+    FullName As label:
+        BorderThickness: =1
+        Height: =70
+        Size: =21
+        Text: =varGlobalUser.fullname
+        Width: =560
+        X: =40
+        Y: =474
+        ZIndex: =3
+
+    LabelFullName As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Nombre Completo:"
+        Width: =560
+        X: =40
+        Y: =404
+        ZIndex: =4
+
+    LabelJobTitle As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Rol:"
+        Width: =560
+        X: =40
+        Y: =707
+        ZIndex: =5
+
+    LabelEmail As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Email:"
+        Width: =560
+        X: =43
+        Y: =557
+        ZIndex: =6
+
+    Address As label:
+        BorderThickness: =1
+        Height: =70
+        Size: =21
+        Text: =varGlobalUser.address
+        Width: =560
+        X: =43
+        Y: =913
+        ZIndex: =7
+
+    LabelJobTitle_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Dirección:"
+        Width: =560
+        X: =43
+        Y: =832
+        ZIndex: =8
+
+    ImageProfileUpload As image:
+        Height: =320
+        Image: =MyCamera.Photo
+        OnSelect: =Navigate(Screen_MakePhoto)
+        Width: =320
+        X: =160
+        Y: =58
+        ZIndex: =9
+
+    Button_UpdateProfile As button:
+        Height: =70
+        OnSelect: |-
+            ='Adv-UploadImageDyn365'.Run(
+                varGlobalUser.email,  
+                {file:
+                    {
+                        name:"test",
+                        contentBytes: MyCamera.Photo
+                    }
+                });
+            Navigate(Screen_Success);
+        Size: =24
+        Text: ="Actualizar Perfil"
+        Width: =280
+        X: =183
+        Y: =1033
+        ZIndex: =10
+

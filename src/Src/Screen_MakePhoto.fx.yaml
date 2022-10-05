@@ -1,0 +1,47 @@
+Screen_MakePhoto As screen:
+    BackgroundImage: =
+    Fill: =RGBA(230, 230, 230, 1)
+
+    Header_1 As Header:
+        Text: ="APPLICATION MPR"
+        Width: =640
+        ZIndex: =5
+
+    MyCamera As camera:
+        Camera: =0
+        Height: =418
+        OnSelect: |-
+            =Collect(Collection1, {Photo: MyCamera.Photo})
+        Width: =640
+        Y: =221
+        ZIndex: =8
+
+    ImageUpload As image:
+        Height: =186
+        Image: =MyCamera.Photo
+        Visible: =false
+        Width: =156
+        X: =324
+        Y: =896
+        ZIndex: =9
+
+    Button3 As button:
+        Height: =70
+        OnSelect: |-
+            =Collect(Collection1, {Photo: MyCamera.Photo})
+        Size: =24
+        Text: |-
+            ="Capturar Imagen
+            "
+        Width: =280
+        X: =180
+        Y: =669
+        ZIndex: =10
+
+    IconBack As icon.ChevronLeft:
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Screen_Info)
+        X: =16
+        Y: =90
+        ZIndex: =11
+

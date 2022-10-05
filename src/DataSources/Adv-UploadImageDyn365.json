@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "6dac55ec-c731-4220-8bed-112cce0b7f8b",
+    "Name": "Adv-UploadImageDyn365",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "94eda993-1840-ed11-9db0-0022489fd98f"
+  }
+]
